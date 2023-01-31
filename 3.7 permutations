@@ -1,0 +1,21 @@
+def per(y):
+    if len(y)==0:
+        return []
+    if len(y)==1:
+        return [y]
+    l=[]
+    for i in range(len(y)):
+        m=y[i]
+        rest=y[:i]+y[i+1:]
+        for j in per(rest):
+            l.append([m]+j)
+    return l
+            
+y=list(map(int,input().split()))
+s=set()
+for i in per(y):
+    s.add(tuple(i))
+list_a=[]
+for i in s:
+    list_a.append(list(i))
+print(sorted(list_a))
