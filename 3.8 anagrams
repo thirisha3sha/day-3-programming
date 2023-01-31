@@ -1,0 +1,28 @@
+x=input().split()
+y=[]
+for i in x:
+    a=sorted(list(i))
+    y.append(a)
+b=[]
+for i in y:
+    b.append(y.count(i))
+c=[]
+d=[]
+e=[]
+for i in range(len(b)):
+    if b[i]==1:
+        c.append(x[i])
+    elif b[i]==2:
+        d.append(x[i])
+    elif b[i]==3:
+        e.append(x[i])
+if len(d)==0:
+    c.extend(d)
+else:
+    c.append(d)
+if len(e)==0:
+    c.extend(d)
+else:
+    
+    c.append(e)
+print(c)
