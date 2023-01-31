@@ -1,0 +1,12 @@
+x=input("nums=").split()
+z=[]
+for i in range(len(x)):
+    y=[]
+    for j in x[i+1:]:
+       if(x[i]==j):
+         a=[x[i],j]
+         a=tuple(a)
+         y.append(a)
+    z.extend(y)
+print(len(z))    
+        
